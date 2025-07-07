@@ -1,0 +1,17 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+
+# Streamlit and build cache
+.cache/
+.streamlit/config.toml
+
+# Notebook checkpoints
+.ipynb_checkpoints/
