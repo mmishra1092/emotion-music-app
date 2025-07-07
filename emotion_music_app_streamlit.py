@@ -88,7 +88,7 @@ def recommend_music(emotion_label):
         return [f"Error fetching recommendations: {e}"]
 
 # ✅ UPDATED LINE HERE
-model_fer = load_model("fer_model_resaved.h5")
+model_fer = load_model("fer_model_resaved.keras")
 model_audio = load_model("best_audio_lstm_model.h5")
 model_text = BertForSequenceClassification.from_pretrained("./saved_model/bert_goemotions")
 tokenizer = BertTokenizer.from_pretrained("./saved_model/bert_goemotions")
