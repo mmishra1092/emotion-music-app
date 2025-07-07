@@ -68,7 +68,7 @@ def fused_emotion(image, text, audio_path, image_model, text_model, tokenizer, a
 emotion_to_music = {
     0: {"mood": "chill", "valence": 0.2},
     1: {"mood": "pop", "valence": 0.8},
-    2: {"mood": "rock", "valence": 0.1},          # was metal → now valid
+    2: {"mood": "rock", "valence": 0.1},
     3: {"mood": "ambient", "valence": 0.1},
     4: {"mood": "electronic", "valence": 0.6},
     5: {"mood": "acoustic", "valence": 0.5},
@@ -87,7 +87,8 @@ def recommend_music(emotion_label):
     except Exception as e:
         return [f"Error fetching recommendations: {e}"]
 
-model_fer = load_model("fer_model.h5")
+# ✅ UPDATED LINE HERE
+model_fer = load_model("fer_model_resaved.h5")
 model_audio = load_model("best_audio_lstm_model.h5")
 model_text = BertForSequenceClassification.from_pretrained("./saved_model/bert_goemotions")
 tokenizer = BertTokenizer.from_pretrained("./saved_model/bert_goemotions")
