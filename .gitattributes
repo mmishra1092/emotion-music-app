@@ -1,0 +1,2 @@
+*.h5 filter=lfs diff=lfs merge=lfs -text
+saved_model/bert_goemotions/model.safetensors filter=lfs diff=lfs merge=lfs -text

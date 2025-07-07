@@ -1,0 +1,11 @@
+streamlit
+opencv-python-headless
+numpy
+pandas
+librosa
+torch
+Pillow
+scikit-learn
+tensorflow
+transformers
+spotipy
